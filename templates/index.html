@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .center {
+        margin: auto;
+        width: 50%;
+        border: 3px solid rgb(16, 17, 16);
+        padding: 10px;
+        background-color:rgb(232,232,211);
+      }
+      td {
+        padding: 3px;
+      }
+      </style>
+  </head>
+<body>
+  <center class='center'>
+  <div>
+    <div>
+      <h1>Affiliate World</h1>
+      <form action="/urlRedirection" method = "post" target="Affiliate_URL">
+        <table>
+          <tr>
+            <td>
+              <label for="amazonURL">Enter Amazon URL</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="text" id="amazonURL" name="amazonURL" value="">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="submit" value="Submit">
+            </td>
+          </tr>
+        </table>
+      </form> 
+    </div>
+    <div>
+    <iframe name = "Affiliate_URL" frameBorder="0">
+    </iframe>
+  </div>
+  </div>
+  </center>
+  </body>
+
+</html>
