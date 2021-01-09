@@ -10,12 +10,10 @@ def api_root():
 
 @app.route('/urlRedirection', methods=['GET','POST'])
 def transform_url():
-    input_url = "https://amzn.to/2JTVwMj"
-    print("Input URL")
-    print(input_url)
+    input_url = request.form['amazonURL']
     affiliate_code = "&tag=anupt-21&"
     if "amzn.to" in input_url:
-        response = requests.get('https://amzn.to/2JTVwMj')
+        response = requests.get(input_url)
         redirected_url = response.url
     elif "amazon.in" in input_url:
         redirected_url = input_url
